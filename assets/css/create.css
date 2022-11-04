@@ -1,0 +1,111 @@
+:root {
+	--color-primary: #008c73;
+	--color-black: #000;
+	--color-white: #fff;
+	--font-primary: 'Inter', sans-serif;
+	--font-secondary: 'Inter', sans-serif;
+}
+
+.create-contract .create {
+	min-height: 90vh;
+}
+.create-contract .create-nav i {
+	font-size: 3rem;
+}
+
+.create-contract .create__list::before {
+	content: '';
+	display: block;
+	width: 2px;
+	height: 90%;
+	background-color: #d1d8dd;
+	position: absolute;
+	top: 50%;
+	left: 1.5rem;
+	transform: translateY(-50%);
+	z-index: 1;
+}
+.create-contract .create__item {
+	padding: 1.5rem 0;
+	/* border-left: 2px solid red; */
+}
+.create-contract .create__number {
+	height: 3.2rem;
+	width: 3.2rem;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #fdfdfd;
+	font-size: 1.6rem;
+	position: relative;
+	z-index: 2;
+}
+.create-contract .active .create__number {
+	background-color: #008c73;
+	color: #fff;
+}
+
+.create-contract .create__btn {
+	font-size: 2rem;
+	font-weight: 600;
+}
+
+.create-contract .create__box {
+	padding: 2.4rem 1.6rem;
+	background-color: #fff;
+	border-radius: 1.2rem;
+	width: 100%;
+	display: none;
+}
+.create-contract .active .create__box {
+	display: block;
+}
+
+/* .create-contract .create__box  */
+.create-contract .create__box {
+	padding: 2.4rem 1.6rem;
+}
+
+.create-contract .create__box--2 .text {
+	font-size: 1.8rem;
+	color: #78828a;
+}
+.create-contract .create__box--4 .create__form {
+	gap: 2.4rem;
+}
+.create-contract .create__box .create__form input,
+.create-contract .create__box .create__form .form-select,
+.create-contract .create__box .create__form textarea {
+	padding: 0.8rem;
+	border: 1.5px solid #e3e9ed;
+	border-radius: 1.2rem;
+	color: #78828a;
+	font-size: 1.6rem;
+}
+.create-contract .create__box .create__form label {
+	color: #1f2c37;
+	font-size: 1.8rem;
+	font-weight: 600;
+}
+.create-contract .create__box .create__btns {
+	gap: 2rem;
+	border-top: 1px solid rgba(31, 44, 55, 0.1);
+	padding-top: 2.4rem;
+}
+.create-contract .create__box .create__btns .btn-cencel {
+	background-color: transparent;
+	color: #000;
+}
+.create-contract .create__box .input-box {
+	border: 1.5px solid #e3e9ed;
+	border-radius: 1.2rem;
+}
+.create-contract .create__box .input-box .icon {
+	padding-left: 0.8rem;
+}
+.create-contract .create__box .input-box input {
+	border: none;
+	outline: none;
+	border-radius: 0;
+}

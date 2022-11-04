@@ -1,0 +1,15 @@
+
+
+/*max-width 580px*/
+@media all and (max-width: 580px) {
+    #scrollup {
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+/*max-width 420px*/
+@media all and (max-width: 420px) {}
+
+/*max-width 320px*/
+@media (max-width: 320px) {}
