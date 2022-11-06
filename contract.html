@@ -14,12 +14,27 @@
 		<title>Logoipsum | Admin Dashboard HTML Template</title>
 
 		<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png" />
-
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+		/>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+			crossorigin="anonymous"
+		/>
 		<link rel="stylesheet" href="assets/css/animate.min.css" />
 		<link rel="stylesheet" href="assets/css/fontawesome.min.css" />
 		<link rel="stylesheet" href="assets/css/keyframe-animation.css" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/responsive.css" />
+		<link rel="stylesheet" href="assets/css/utilities.css" />
+		<link rel="stylesheet" href="assets/css/dashboard.css" />
 	</head>
 
 	<body>
@@ -35,17 +50,21 @@
 		</div>
 		<!--site preloader-->
 
+		<!-- main-header -->
 		<header class="header">
 			<div class="top-header">
-				<div class="right-content"></div>
+				<button class="openSidebar">
+					<i class="bi bi-layout-text-sidebar-reverse d-block d-xl-none"></i>
+				</button>
+
 				<div class="right-content">
 					<ul class="header-list">
 						<li>
-							<div class="header-icon">
+							<button class="header-icon notification-btn">
 								<a href="#"><i class="fa-regular fa-bell"></i></a>
-							</div>
+							</button>
 						</li>
-						<li>
+						<li class="wallet-btn">
 							<div class="header-thumb">
 								<img src="assets/img/Connect.png" alt="connect" />
 							</div>
@@ -53,7 +72,7 @@
 								<h3>Not Connected <span>Connect Wallet</span></h3>
 							</div>
 						</li>
-						<li>
+						<li class="etherium-btn">
 							<div class="header-thumb">
 								<img src="assets/img/Ethereum.png" alt="ethereum" />
 							</div>
@@ -62,6 +81,136 @@
 							</div>
 						</li>
 					</ul>
+				</div>
+
+				<!-- notification box -->
+				<div class="overlay notification-overlay show-notification-overlay"></div>
+				<div class="notification dashboard__box popup show-notification">
+					<div class="d-flex justify-content-between align-items-center mb-2">
+						<h5 class="heading">Notification</h5>
+						<button class="btn-clear">all clear</button>
+					</div>
+					<div class="notification__item mb-2 d-flex align-items-start">
+						<figure class="notification__img mr-1">
+							<img src="assets/img/icon-1.png" alt="" />
+						</figure>
+						<div class="notification__desc">
+							<p class="text mb-1">
+								Contract... - New Message: seller Can I submit a new request to update contract?
+							</p>
+							<p class="text"><strong>12:59 PM</strong></p>
+						</div>
+					</div>
+					<div class="notification__item mb-2 d-flex align-items-start">
+						<figure class="notification__img mr-1">
+							<img src="assets/img/icon-2.png" alt="" />
+						</figure>
+						<div class="notification__desc">
+							<p class="text mb-1">
+								Contract Name... - Contract deployed: Buyer 0x.. <br />
+								Contract is deployed on Chain
+							</p>
+							<p class="text"><strong>12:59 PM</strong></p>
+						</div>
+					</div>
+				</div>
+
+				<!--  wallet box -->
+				<div class="overlay wallet-overlay"></div>
+				<div class="wallet dashboard__box popup d-flex flex-column align-items-center">
+					<h3 class="heading mb-3">Connect Wallet</h3>
+					<img src="assets/img/shield-lock.png" alt="" class="wallet__img mb-3 d-block" />
+					<button class="btn btn-wallet">Connect Wallet</button>
+				</div>
+
+				<!-- connect box -->
+				<div class="overlay connect-overlay"></div>
+				<div class="connect dashboard__box popup">
+					<img src="assets/img/Profile.png" alt="" class="mb-2 connect__img" />
+					<div class="d-flex align-items-center mb-2 gap-4">
+						<div class="connect__eth d-flex align-items-center">
+							<strong>eth: </strong>
+							<p class="text">0xfF501B324DC6d78d</p>
+						</div>
+						<button class="btn copy-btn">
+							<svg class="icon icon-copy-icon">
+								<use xlink:href="assets/img/icons.svg#icon-copy-icon"></use>
+							</svg>
+						</button>
+						<button class="btn edit-btn">
+							<svg class="icon icon-edit-icon">
+								<use xlink:href="assets/img/icons.svg#icon-edit-icon"></use>
+							</svg>
+						</button>
+					</div>
+					<form action="#" class="connect__form">
+						<div class="metamask mb-1">
+							<input type="text" id="metamask" placeholder="Wallet" />
+							<label for="metamask d-flex align-items-center">
+								<img src="assets/img/wallet.svg" alt="" />
+								<span class="text">metamask</span>
+							</label>
+						</div>
+
+						<div class="metamask mb-3">
+							<input type="text" id="etherium" placeholder="Connected Network" />
+							<label for="etherium d-flex align-items-center">
+								<img src="assets/img/dot-img.png" alt="" />
+								<span class="text">Ethereum</span>
+							</label>
+						</div>
+
+						<button class="btn btn-wallet">Connect Wallet</button>
+					</form>
+				</div>
+
+				<!-- connect box -->
+				<div class="overlay etherium-overlay"></div>
+				<div class="etherium dashboard__box popup">
+					<div class="etherium__item">
+						<img src="assets/img/Ethereum.png" class="etherium__img mr-1" alt="" />
+						<span class="text">Etherium</span>
+					</div>
+					<div class="etherium__item">
+						<img src="assets/img/etherium-icon-2.png" class="etherium__img mr-1" alt="" />
+						<span class="text">Gnosis Coin</span>
+					</div>
+					<div class="etherium__item">
+						<img src="assets/img/etherium-icon-3.png" class="etherium__img mr-1" alt="" />
+						<span class="text">Polygon</span>
+					</div>
+					<div class="etherium__item">
+						<img src="assets/img/etherium-icon-4.png" class="etherium__img mr-1" alt="" />
+						<span class="text">BNB Smart Coin</span>
+					</div>
+					<div class="etherium__item">
+						<img src="assets/img/etherium-icon-5.png" class="etherium__img mr-1" alt="" />
+						<span class="text">Energy Web Chain</span>
+					</div>
+					<div class="etherium__item">
+						<img src="assets/img/etherium-icon-6.png" class="etherium__img mr-1" alt="" />
+						<span class="text">Arbitrum</span>
+					</div>
+					<div class="etherium__item">
+						<img src="assets/img/etherium-icon-7.png" class="etherium__img mr-1" alt="" />
+						<span class="text">Aurora</span>
+					</div>
+					<div class="etherium__item">
+						<img src="assets/img/etherium-icon-8.png" class="etherium__img mr-1" alt="" />
+						<span class="text">Avalanche</span>
+					</div>
+					<div class="etherium__item">
+						<img src="assets/img/etherium-icon-9.png" class="etherium__img mr-1" alt="" />
+						<span class="text">Optimism</span>
+					</div>
+					<div class="etherium__item">
+						<img src="assets/img/etherium-icon-10.png" class="etherium__img mr-1" alt="" />
+						<span class="text">Goerli</span>
+					</div>
+					<div class="etherium__item">
+						<img src="assets/img/etherium-icon-11.png" class="etherium__img mr-1" alt="" />
+						<span class="text">Volta</span>
+					</div>
 				</div>
 			</div>
 		</header>
@@ -461,6 +610,11 @@
 		<!--scrollup-->
 
 		<!--jQuery Lib-->
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+			crossorigin="anonymous"
+		></script>
 		<script src="assets/js/vendor/jquary-3.6.0.min.js"></script>
 		<script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 		<script src="assets/js/vendor/jquery.ajaxchimp.min.js"></script>

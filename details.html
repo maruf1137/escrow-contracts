@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+	<!--<![endif]-->
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="Starter HTML Template" />
+		<meta name="author" content="ThemeEaster" />
+
+		<title>Logoipsum | Admin Dashboard HTML Template</title>
+
+		<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+		/>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="assets/css/animate.min.css" />
+		<link rel="stylesheet" href="assets/css/fontawesome.min.css" />
+		<link rel="stylesheet" href="assets/css/keyframe-animation.css" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/responsive.css" />
+		<link rel="stylesheet" href="assets/css/utilities.css" />
+		<link rel="stylesheet" href="assets/css/create.css" />
+		<link rel="stylesheet" href="assets/css/dashboard.css" />
+	</head>
+
+	<body class="create-contract">
+		<div class="site-preloader">
+			<div class="spinner"></div>
+		</div>
+		<!--site preloader-->
+
+		<!-- main-header -->
+		<header class="header">
+			<div class="top-header">
+				<button class="openSidebar">
+					<i class="bi bi-layout-text-sidebar-reverse d-block d-xl-none"></i>
+				</button>
+
+				<div class="right-content">
+					<ul class="header-list">
+						<li>
+							<button class="header-icon notification-btn">
+								<a href="#"><i class="fa-regular fa-bell"></i></a>
+							</button>
+						</li>
+						<li class="wallet-btn">
+							<div class="header-thumb">
+								<img src="assets/img/Connect.png" alt="connect" />
+							</div>
+							<div class="header-info">
+								<h3>Not Connected <span>Connect Wallet</span></h3>
+							</div>
+						</li>
+						<li class="etherium-btn">
+							<div class="header-thumb">
+								<img src="assets/img/Ethereum.png" alt="ethereum" />
+							</div>
+							<div class="header-info">
+								<h3>Ethereum</h3>
+							</div>
+						</li>
+					</ul>
+				</div>
+
+				<!-- notification box -->
+				<div class="overlay notification-overlay"></div>
+				<div class="notification dashboard__box">
+					<div class="d-flex justify-content-between align-items-center mb-2">
+						<h5 class="heading">Notification</h5>
+						<button class="btn-clear">all clear</button>
+					</div>
+					<div class="notification__item mb-2 d-flex align-items-start">
+						<figure class="notification__img mr-1">
+							<img src="assets/img/icon-1.png" alt="" />
+						</figure>
+						<div class="notification__desc">
+							<p class="text mb-1">
+								Contract... - New Message: seller Can I submit a new request to update contract?
+							</p>
+							<p class="text"><strong>12:59 PM</strong></p>
+						</div>
+					</div>
+					<div class="notification__item mb-2 d-flex align-items-start">
+						<figure class="notification__img mr-1">
+							<img src="assets/img/icon-2.png" alt="" />
+						</figure>
+						<div class="notification__desc">
+							<p class="text mb-1">
+								Contract Name... - Contract deployed: Buyer 0x.. <br />
+								Contract is deployed on Chain
+							</p>
+							<p class="text"><strong>12:59 PM</strong></p>
+						</div>
+					</div>
+				</div>
+
+				<!--  wallet box -->
+				<div class="overlay wallet-overlay"></div>
+				<div class="wallet dashboard__box popup d-flex flex-column align-items-center">
+					<h3 class="heading mb-3">Connect Wallet</h3>
+					<img src="assets/img/shield-lock.png" alt="" class="wallet__img mb-3 d-block" />
+					<button class="btn btn-wallet">Connect Wallet</button>
+				</div>
+
+				<!-- connect box -->
+				<div class="overlay connect-overlay"></div>
+				<div class="connect dashboard__box popup">
+					<img src="assets/img/Profile.png" alt="" class="mb-2 connect__img" />
+					<div class="d-flex align-items-center mb-2 gap-4">
+						<div class="connect__eth d-flex align-items-center">
+							<strong>eth: </strong>
+							<p class="text">0xfF501B324DC6d78d</p>
+						</div>
+						<button class="btn copy-btn">
+							<svg class="icon icon-copy-icon">
+								<use xlink:href="assets/img/icons.svg#icon-copy-icon"></use>
+							</svg>
+						</button>
+						<button class="btn edit-btn">
+							<svg class="icon icon-edit-icon">
+								<use xlink:href="assets/img/icons.svg#icon-edit-icon"></use>
+							</svg>
+						</button>
+					</div>
+					<form action="#" class="connect__form">
+						<div class="metamask mb-1">
+							<input type="text" id="metamask" placeholder="Wallet" />
+							<label for="metamask d-flex align-items-center">
+								<img src="assets/img/wallet.svg" alt="" />
+								<span class="text">metamask</span>
+							</label>
+						</div>
+
+						<div class="metamask mb-3">
+							<input type="text" id="etherium" placeholder="Connected Network" />
+							<label for="etherium d-flex align-items-center">
+								<img src="assets/img/dot-img.png" alt="" />
+								<span class="text">Ethereum</span>
+							</label>
+						</div>
+
+						<button class="btn btn-wallet">Connect Wallet</button>
+					</form>
+				</div>
+
+				<!-- connect box -->
+				<div class="overlay etherium-overlay"></div>
+				<div class="etherium dashboard__box popup">
+					<div class="etherium__item">
+						<img src="assets/img/Ethereum.png" class="etherium__img mr-1" alt="" />
+						<span class="text">Etherium</span>
+					</div>
+					<div class="etherium__item">
+						<img src="assets/img/etherium-icon-2.png" class="etherium__img mr-1" alt="" />
+						<span class="text">Gnosis Coin</span>
+					</div>
+					<div class="etherium__item">
+						<img src="assets/img/etherium-icon-3.png" class="etherium__img mr-1" alt="" />
+						<span class="text">Polygon</span>
+					</div>
+					<div class="etherium__item">
+						<img src="assets/img/etherium-icon-4.png" class="etherium__img mr-1" alt="" />
+						<span class="text">BNB Smart Coin</span>
+					</div>
+					<div class="etherium__item">
+						<img src="assets/img/etherium-icon-5.png" class="etherium__img mr-1" alt="" />
+						<span class="text">Energy Web Chain</span>
+					</div>
+					<div class="etherium__item">
+						<img src="assets/img/etherium-icon-6.png" class="etherium__img mr-1" alt="" />
+						<span class="text">Arbitrum</span>
+					</div>
+					<div class="etherium__item">
+						<img src="assets/img/etherium-icon-7.png" class="etherium__img mr-1" alt="" />
+						<span class="text">Aurora</span>
+					</div>
+					<div class="etherium__item">
+						<img src="assets/img/etherium-icon-8.png" class="etherium__img mr-1" alt="" />
+						<span class="text">Avalanche</span>
+					</div>
+					<div class="etherium__item">
+						<img src="assets/img/etherium-icon-9.png" class="etherium__img mr-1" alt="" />
+						<span class="text">Optimism</span>
+					</div>
+					<div class="etherium__item">
+						<img src="assets/img/etherium-icon-10.png" class="etherium__img mr-1" alt="" />
+						<span class="text">Goerli</span>
+					</div>
+					<div class="etherium__item">
+						<img src="assets/img/etherium-icon-11.png" class="etherium__img mr-1" alt="" />
+						<span class="text">Volta</span>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<section class="main-content bg-grey create">
+			<div class="create-nav d-flex align-items-center mb-2">
+				<i class="bi bi-chevron-left mr-1"></i>
+				<h3 class="heading">Contract Details</h3>
+			</div>
+
+			<div class="dashboard__box contractor row g-5 mb-2">
+				<div class="col-12 col-lg-6">
+					<div class="contractor__left">
+						<h4 class="heading mb-2">Lorem ipsum dolor sit amet. consectetur adipiscing elit</h4>
+						<p class="text">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+							incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+							exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+							dolor in reprehenderit in voluptate velit esse cillum
+						</p>
+					</div>
+				</div>
+				<div class="col-12 col-lg-6">
+					<div class="contractor__right">
+						<h4 class="heading mb-2">heading</h4>
+						<div
+							class="seller d-flex flex-wrap align-items-center justify-content-between gap-4 mb-2"
+						>
+							<div class="d-flex align-items-center gap-4">
+								<img src="assets/img/Profile.png" alt="" />
+								<div class="seller__id">
+									<strong>seller: </strong>
+									<span>0xfF501B324D3df2f1adf</span>
+								</div>
+							</div>
+							<div class="seller__btns d-flex align-items-center">
+								<button class="btn-copy">
+									<svg class="icon">
+										<use xlink:href="assets/img/icons.svg#icon-copy-2"></use>
+									</svg>
+								</button>
+								<button class="btn-edit">
+									<svg class="icon">
+										<use xlink:href="assets/img/icons.svg#icon-edit-2"></use>
+									</svg>
+								</button>
+							</div>
+						</div>
+						<div class="contractor__list d-flex align-items-stretch gap-4">
+							<div class="contractor__item btn">
+								<p class="text mb-1">amount</p>
+								<h5 class="heading count">0.32 ETH</h5>
+							</div>
+							<div class="contractor__item btn">
+								<p class="text mb-1">Duration</p>
+								<h5 class="heading count">340 Days</h5>
+							</div>
+							<div class="contractor__item btn">
+								<p class="text mb-1">Treshold</p>
+								<h5 class="heading count">340 Days</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 col-lg-6">
+					<div class="owner">
+						<div class="owner__list">
+							<div class="owner__item">
+								<div class="owner__nav mb-1 d-flex align-items-center gap-3">
+									<img src="assets/img/icon-3.png" class="owner__img" alt="" />
+									<p class="text">Contract is created by</p>
+								</div>
+								<div
+									class="seller d-flex flex-wrap align-items-center justify-content-between gap-4 mb-2 ml-3"
+								>
+									<div class="d-flex align-items-center gap-4">
+										<img src="assets/img/Profile.png" alt="" />
+										<div class="seller__id">
+											<strong>seller: </strong>
+											<span>0xfF501B324D3df2f1adf</span>
+										</div>
+									</div>
+									<div class="seller__btns d-flex align-items-center">
+										<button class="btn-copy">
+											<svg class="icon">
+												<use xlink:href="assets/img/icons.svg#icon-copy-2"></use>
+											</svg>
+										</button>
+										<button class="btn-edit">
+											<svg class="icon">
+												<use xlink:href="assets/img/icons.svg#icon-edit-2"></use>
+											</svg>
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="owner__item">
+								<div class="owner__nav mb-1 d-flex align-items-center gap-3">
+									<img src="assets/img/icon-2.png" class="owner__img" alt="" />
+									<p class="text">Contract is deployed by</p>
+								</div>
+								<div
+									class="seller d-flex flex-wrap align-items-center justify-content-between gap-4 mb-2 ml-3"
+								>
+									<div class="d-flex align-items-center gap-4">
+										<img src="assets/img/Profile.png" alt="" />
+										<div class="seller__id">
+											<strong>seller: </strong>
+											<span>0xfF501B324D3df2f1adf</span>
+										</div>
+									</div>
+									<div class="seller__btns d-flex align-items-center">
+										<button class="btn-copy">
+											<svg class="icon">
+												<use xlink:href="assets/img/icons.svg#icon-copy-2"></use>
+											</svg>
+										</button>
+										<button class="btn-edit">
+											<svg class="icon">
+												<use xlink:href="assets/img/icons.svg#icon-edit-2"></use>
+											</svg>
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="owner__item">
+								<div class="owner__nav mb-1 d-flex align-items-center gap-3">
+									<img src="assets/img/icon-4.png" class="owner__img" alt="" />
+									<p class="text">Contract is accepted by</p>
+								</div>
+								<div
+									class="seller d-flex flex-wrap align-items-center justify-content-between gap-4 mb-2 ml-3"
+								>
+									<div class="d-flex align-items-center gap-4">
+										<img src="assets/img/Profile.png" alt="" />
+										<div class="seller__id">
+											<strong>seller: </strong>
+											<span>0xfF501B324D3df2f1adf</span>
+										</div>
+									</div>
+									<div class="seller__btns d-flex align-items-center">
+										<button class="btn-copy">
+											<svg class="icon">
+												<use xlink:href="assets/img/icons.svg#icon-copy-2"></use>
+											</svg>
+										</button>
+										<button class="btn-edit">
+											<svg class="icon">
+												<use xlink:href="assets/img/icons.svg#icon-edit-2"></use>
+											</svg>
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="owner__item">
+								<div class="owner__nav mb-1 d-flex align-items-center gap-3">
+									<img src="assets/img/icon-1.png" class="owner__img" alt="" />
+									<p class="text">Contract update is requested</p>
+								</div>
+								<div
+									class="seller d-flex flex-wrap align-items-center justify-content-between gap-4 mb-2 ml-3"
+								>
+									<div class="d-flex align-items-center gap-4">
+										<img src="assets/img/Profile.png" alt="" />
+										<div class="seller__id">
+											<strong>seller: </strong>
+											<span>0xfF501B324D3df2f1adf</span>
+										</div>
+									</div>
+									<div class="seller__btns d-flex align-items-center">
+										<button class="btn-copy">
+											<svg class="icon">
+												<use xlink:href="assets/img/icons.svg#icon-copy-2"></use>
+											</svg>
+										</button>
+										<button class="btn-edit">
+											<svg class="icon">
+												<use xlink:href="assets/img/icons.svg#icon-edit-2"></use>
+											</svg>
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="owner__item">
+								<div class="owner__nav mb-1 d-flex align-items-center gap-3">
+									<img src="assets/img/icon-4.png" class="owner__img" alt="" />
+									<p class="text">Contract is accepted by</p>
+								</div>
+								<div
+									class="seller d-flex flex-wrap align-items-center justify-content-between gap-4 mb-2 ml-3"
+								>
+									<div class="d-flex align-items-center gap-4">
+										<img src="assets/img/Profile.png" alt="" />
+										<div class="seller__id">
+											<strong>seller: </strong>
+											<span>0xfF501B324D3df2f1adf</span>
+										</div>
+									</div>
+									<div class="seller__btns d-flex align-items-center">
+										<button class="btn-copy">
+											<svg class="icon">
+												<use xlink:href="assets/img/icons.svg#icon-copy-2"></use>
+											</svg>
+										</button>
+										<button class="btn-edit">
+											<svg class="icon">
+												<use xlink:href="assets/img/icons.svg#icon-edit-2"></use>
+											</svg>
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="owner__item">
+								<div class="owner__nav mb-1 d-flex align-items-center gap-3">
+									<img src="assets/img/icon-1.png" class="owner__img" alt="" />
+									<p class="text">Contract update is requested</p>
+								</div>
+								<div
+									class="seller d-flex flex-wrap align-items-center justify-content-between gap-4 mb-2 ml-3"
+								>
+									<div class="d-flex align-items-center gap-4">
+										<img src="assets/img/Profile.png" alt="" />
+										<div class="seller__id">
+											<strong>seller: </strong>
+											<span>0xfF501B324D3df2f1adf</span>
+										</div>
+									</div>
+									<div class="seller__btns d-flex align-items-center">
+										<button class="btn-copy">
+											<svg class="icon">
+												<use xlink:href="assets/img/icons.svg#icon-copy-2"></use>
+											</svg>
+										</button>
+										<button class="btn-edit">
+											<svg class="icon">
+												<use xlink:href="assets/img/icons.svg#icon-edit-2"></use>
+											</svg>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="owner-btn">
+							<button class="btn btn-continue">Continue</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-lg-6">
+					<div class="owner message">
+						<div class="owner__list">
+							<div
+								class="message__item message__seller d-flex justify-content-start align-items-start gap-4 mb-4"
+							>
+								<img src="assets/img/bg.png" class="message__img" alt="" />
+								<div class="message__details">
+									<div class="name">seller</div>
+									<div class="dashboard__box">
+										<p class="text mb-1">
+											Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+											Lorem Ipsum has been the
+										</p>
+										<div class="time">12:45 PM</div>
+									</div>
+								</div>
+							</div>
+
+							<div
+								class="message__item message__buyer d-flex justify-content-start align-items-start gap-4"
+							>
+								<div class="message__details">
+									<div class="name">seller</div>
+									<div class="dashboard__box">
+										<p class="text mb-1">
+											Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+											Lorem Ipsum has been the
+										</p>
+										<div class="time">12:45 PM</div>
+									</div>
+								</div>
+								<img src="assets/img/bg.png" class="message__img" alt="" />
+							</div>
+						</div>
+						<form
+							action="#"
+							class="message__form d-flex justify-content-between align-items-center gap-5"
+						>
+							<div class="text__box d-flex align-items-center justify-content-between gap-2 w-100">
+								<input type="text" placeholder="Send Mesage" class="w-100" />
+								<button class="btn__form btn-emoji">
+									<img src="assets/img/Smileys.svg" alt="" />
+								</button>
+								<button class="btn__form btn-document">
+									<img src="assets/img/document.icon.svg" alt="" />
+								</button>
+							</div>
+							<button class="btn">
+								<svg class="icon icon-send">
+									<use xlink:href="assets/img/icons.svg#icon-send"></use>
+								</svg>
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- main-content -->
+
+		<div class="main-sidebar">
+			<div class="sidebar-logo">
+				<img src="assets/img/logo.png" alt="logo" />
+			</div>
+			<ul class="sidebar-list list-1">
+				<li>
+					<a href="#"><i class="fa-regular fa-house"></i>Home</a>
+				</li>
+				<li class="sidebar-dropdown">
+					<div id="accordian">
+						<ul>
+							<li>
+								<h3><i class="fa-regular fa-briefcase"></i>Contract</h3>
+								<ul class="accordian-item">
+									<li><a href="#">Pending</a></li>
+									<li><a href="#">Active</a></li>
+									<li><a href="#">Finished</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#"><i class="fa-regular fa-box-ballot"></i>Vote</a>
+				</li>
+				<li>
+					<a href="#"><i class="fa-regular fa-bell"></i>Notification</a>
+				</li>
+			</ul>
+			<ul class="sidebar-list">
+				<li>
+					<a href="#"><i class="fa-regular fa-gift"></i>Whats's New</a>
+				</li>
+				<li>
+					<a href="#"><i class="fa-regular fa-comment-question"></i>Help Center</a>
+				</li>
+			</ul>
+		</div>
+		<!-- main-sidebar -->
+
+		<div id="scrollup">
+			<button id="scroll-top" class="scroll-to-top"><i class="fas fa-arrow-up"></i></button>
+		</div>
+		<!--scrollup-->
+
+		<!--jQuery Lib-->
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+			crossorigin="anonymous"
+		></script>
+		<script src="assets/js/vendor/jquary-3.6.0.min.js"></script>
+		<script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+		<script src="assets/js/vendor/jquery.ajaxchimp.min.js"></script>
+		<script src="assets/js/vendor/bootstrap.min.js"></script>
+		<script src="assets/js/vendor/popper.min.js"></script>
+		<script src="assets/js/vendor/jquery.isotope.v3.0.2.js"></script>
+		<script src="assets/js/main.js"></script>
+	</body>
+</html>

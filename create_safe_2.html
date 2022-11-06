@@ -35,32 +35,30 @@
 		<link rel="stylesheet" href="assets/css/responsive.css" />
 		<link rel="stylesheet" href="assets/css/utilities.css" />
 		<link rel="stylesheet" href="assets/css/create.css" />
+		<link rel="stylesheet" href="assets/css/dashboard.css" />
 	</head>
 
 	<body class="create-contract">
-		<!--[if lt IE 8]>
-			<p class="browserupgrade">
-				You are using an <strong>outdated</strong> browser. Please
-				<a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
-			</p>
-		<![endif]-->
-
 		<div class="site-preloader">
 			<div class="spinner"></div>
 		</div>
 		<!--site preloader-->
 
+		<!-- main-header -->
 		<header class="header">
 			<div class="top-header">
-				<div class="right-content"></div>
+				<button class="openSidebar">
+					<i class="bi bi-layout-text-sidebar-reverse d-block d-xl-none"></i>
+				</button>
+
 				<div class="right-content">
 					<ul class="header-list">
 						<li>
-							<div class="header-icon">
+							<button class="header-icon notification-btn">
 								<a href="#"><i class="fa-regular fa-bell"></i></a>
-							</div>
+							</button>
 						</li>
-						<li>
+						<li class="wallet-btn">
 							<div class="header-thumb">
 								<img src="assets/img/Connect.png" alt="connect" />
 							</div>
@@ -68,7 +66,7 @@
 								<h3>Not Connected <span>Connect Wallet</span></h3>
 							</div>
 						</li>
-						<li>
+						<li class="etherium-btn">
 							<div class="header-thumb">
 								<img src="assets/img/Ethereum.png" alt="ethereum" />
 							</div>
@@ -78,9 +76,138 @@
 						</li>
 					</ul>
 				</div>
+
+				<!-- notification box -->
+				<div class="overlay notification-overlay show-notification-overlay"></div>
+				<div class="notification dashboard__box popup show-notification">
+					<div class="d-flex justify-content-between align-items-center mb-2">
+						<h5 class="heading">Notification</h5>
+						<button class="btn-clear">all clear</button>
+					</div>
+					<div class="notification__item mb-2 d-flex align-items-start">
+						<figure class="notification__img mr-1">
+							<img src="assets/img/icon-1.png" alt="" />
+						</figure>
+						<div class="notification__desc">
+							<p class="text mb-1">
+								Contract... - New Message: seller Can I submit a new request to update contract?
+							</p>
+							<p class="text"><strong>12:59 PM</strong></p>
+						</div>
+					</div>
+					<div class="notification__item mb-2 d-flex align-items-start">
+						<figure class="notification__img mr-1">
+							<img src="assets/img/icon-2.png" alt="" />
+						</figure>
+						<div class="notification__desc">
+							<p class="text mb-1">
+								Contract Name... - Contract deployed: Buyer 0x.. <br />
+								Contract is deployed on Chain
+							</p>
+							<p class="text"><strong>12:59 PM</strong></p>
+						</div>
+					</div>
+				</div>
+
+				<!--  wallet box -->
+				<div class="overlay wallet-overlay"></div>
+				<div class="wallet dashboard__box popup d-flex flex-column align-items-center">
+					<h3 class="heading mb-3">Connect Wallet</h3>
+					<img src="assets/img/shield-lock.png" alt="" class="wallet__img mb-3 d-block" />
+					<button class="btn btn-wallet">Connect Wallet</button>
+				</div>
+
+				<!-- connect box -->
+				<div class="overlay connect-overlay"></div>
+				<div class="connect dashboard__box popup">
+					<img src="assets/img/Profile.png" alt="" class="mb-2 connect__img" />
+					<div class="d-flex align-items-center mb-2 gap-4">
+						<div class="connect__eth d-flex align-items-center">
+							<strong>eth: </strong>
+							<p class="text">0xfF501B324DC6d78d</p>
+						</div>
+						<button class="btn copy-btn">
+							<svg class="icon icon-copy-icon">
+								<use xlink:href="assets/img/icons.svg#icon-copy-icon"></use>
+							</svg>
+						</button>
+						<button class="btn edit-btn">
+							<svg class="icon icon-edit-icon">
+								<use xlink:href="assets/img/icons.svg#icon-edit-icon"></use>
+							</svg>
+						</button>
+					</div>
+					<form action="#" class="connect__form">
+						<div class="metamask mb-1">
+							<input type="text" id="metamask" placeholder="Wallet" />
+							<label for="metamask d-flex align-items-center">
+								<img src="assets/img/wallet.svg" alt="" />
+								<span class="text">metamask</span>
+							</label>
+						</div>
+
+						<div class="metamask mb-3">
+							<input type="text" id="etherium" placeholder="Connected Network" />
+							<label for="etherium d-flex align-items-center">
+								<img src="assets/img/dot-img.png" alt="" />
+								<span class="text">Ethereum</span>
+							</label>
+						</div>
+
+						<button class="btn btn-wallet">Connect Wallet</button>
+					</form>
+				</div>
+
+				<!-- connect box -->
+				<div class="overlay etherium-overlay"></div>
+				<div class="etherium dashboard__box popup">
+					<div class="etherium__item">
+						<img src="assets/img/Ethereum.png" class="etherium__img mr-1" alt="" />
+						<span class="text">Etherium</span>
+					</div>
+					<div class="etherium__item">
+						<img src="assets/img/etherium-icon-2.png" class="etherium__img mr-1" alt="" />
+						<span class="text">Gnosis Coin</span>
+					</div>
+					<div class="etherium__item">
+						<img src="assets/img/etherium-icon-3.png" class="etherium__img mr-1" alt="" />
+						<span class="text">Polygon</span>
+					</div>
+					<div class="etherium__item">
+						<img src="assets/img/etherium-icon-4.png" class="etherium__img mr-1" alt="" />
+						<span class="text">BNB Smart Coin</span>
+					</div>
+					<div class="etherium__item">
+						<img src="assets/img/etherium-icon-5.png" class="etherium__img mr-1" alt="" />
+						<span class="text">Energy Web Chain</span>
+					</div>
+					<div class="etherium__item">
+						<img src="assets/img/etherium-icon-6.png" class="etherium__img mr-1" alt="" />
+						<span class="text">Arbitrum</span>
+					</div>
+					<div class="etherium__item">
+						<img src="assets/img/etherium-icon-7.png" class="etherium__img mr-1" alt="" />
+						<span class="text">Aurora</span>
+					</div>
+					<div class="etherium__item">
+						<img src="assets/img/etherium-icon-8.png" class="etherium__img mr-1" alt="" />
+						<span class="text">Avalanche</span>
+					</div>
+					<div class="etherium__item">
+						<img src="assets/img/etherium-icon-9.png" class="etherium__img mr-1" alt="" />
+						<span class="text">Optimism</span>
+					</div>
+					<div class="etherium__item">
+						<img src="assets/img/etherium-icon-10.png" class="etherium__img mr-1" alt="" />
+						<span class="text">Goerli</span>
+					</div>
+					<div class="etherium__item">
+						<img src="assets/img/etherium-icon-11.png" class="etherium__img mr-1" alt="" />
+						<span class="text">Volta</span>
+					</div>
+				</div>
 			</div>
 		</header>
-		<!-- main-header -->
 
 		<section class="main-content bg-grey create">
 			<div class="create-nav d-flex align-items-center">
@@ -182,13 +309,98 @@
 								irure dolor in reprehenderit in voluptate velit esse cillum
 							</p>
 							<form action="#" class="create__form mb-2 d-flex align-content-start">
-								<div class="d-flex flex-column w-100">
+								<div class="d-flex flex-column w-100 js-etherium">
 									<label for="address" class="mb-1">Contractor Address</label>
 									<div class="input-box">
 										<svg class="icon">
 											<use xlink:href="assets/img/icons.svg#icon-ethereum"></use>
 										</svg>
 										<input type="text" id="address" placeholder="Create a new website" />
+									</div>
+
+									<div class="overlay currency-overlay"></div>
+									<div class="dashboard__box currency">
+										<div class="currency__content">
+											<div
+												class="currency__nav d-flex justify-content-between align-items-center mb-2"
+											>
+												<h5 class="heading">Select Contact Currency</h5>
+												<button
+													class="close-popup d-flex justify-content-center align-items-center"
+												>
+													<i class="bi bi-x"></i>
+												</button>
+											</div>
+											<div class="currency__form d-flex align-items-center mb-2 gap-2">
+												<label for="name">
+													<i class="bi bi-search"></i>
+												</label>
+												<input
+													type="text"
+													placeholder="Search name or paste address"
+													id="name"
+													class="w-100"
+												/>
+											</div>
+
+											<div class="currency__btns d-flex align-items-center flex-wrap mb-2">
+												<button class="btn d-flex align-items-center active">
+													<img src="assets/img/Ethereum.png" alt="" />
+													<span class="text">Ethereum</span>
+												</button>
+												<button class="btn d-flex align-items-center">
+													<img src="assets/img/etherium-icon-3.png" alt="" />
+													<span class="text">Polygon</span>
+												</button>
+												<button class="btn d-flex align-items-center">
+													<img src="assets/img/etherium-icon-4.png" alt="" />
+													<span class="text">BNB Smart Coin</span>
+												</button>
+												<button class="btn d-flex align-items-center btn-4">
+													<img src="assets/img/etherium-icon-8.png" alt="" />
+													<span class="text">Avalanche</span>
+												</button>
+											</div>
+											<hr />
+											<div class="currency__list mt-2 d-flex flex-column gap-3">
+												<div
+													class="currency__item d-flex align-items-center justify-content-between"
+												>
+													<div class="d-flex align-items-center gap-3">
+														<img src="assets/img/Ethereum.png" alt="" />
+														<span class="text">Ethereum</span>
+													</div>
+													<div class="count">0</div>
+												</div>
+												<div
+													class="currency__item d-flex align-items-center justify-content-between gap-5"
+												>
+													<div class="d-flex align-items-center gap-3">
+														<img src="assets/img/etherium-icon-3.png" alt="" />
+														<span class="text">Polygon</span>
+													</div>
+													<div class="count">0</div>
+												</div>
+												<div
+													class="currency__item d-flex align-items-center justify-content-between gap-5"
+												>
+													<div class="d-flex align-items-center gap-3">
+														<img src="assets/img/etherium-icon-4.png" alt="" />
+														<span class="text">BNB Smart Coin</span>
+													</div>
+													<div class="count">0</div>
+												</div>
+												<div
+													class="currency__item d-flex align-items-center justify-content-between gap-5"
+												>
+													<div class="d-flex align-items-center gap-3">
+														<img src="assets/img/etherium-icon-8.png" alt="" />
+														<span class="text">Avalanche</span>
+													</div>
+													<div class="count">0</div>
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
 								<div class="d-flex flex-column w-100">

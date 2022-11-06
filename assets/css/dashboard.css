@@ -1,3 +1,11 @@
+:root {
+	--color-primary: #008c73;
+	--color-black: #000;
+	--color-white: #fff;
+	--font-primary: 'Inter', sans-serif;
+	--font-secondary: 'Inter', sans-serif;
+}
+
 .dashboard {
 	min-height: 80vh;
 }
@@ -5,6 +13,13 @@
 	background: #ffffff;
 	border-radius: 1.2rem;
 	padding: 2.4rem;
+	width: 100%;
+	margin: auto;
+}
+
+.profile .nav {
+	gap: 1rem 0;
+	overflow: hidden;
 }
 .dashboard .profile__img img {
 	height: 100%;
@@ -76,6 +91,11 @@
 .dashboard .action__item {
 	padding: 1.5rem;
 }
+.dashboard .action__item .item {
+	padding: 1.5rem;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
 .dashboard .action__item:not(:last-child) {
 	border-bottom: 1px solid rgba(31, 44, 55, 0.1);
 }
@@ -88,4 +108,188 @@
 }
 .dashboard .action .btn {
 	background: #3661eb;
+}
+
+/* ======================== */
+/* header notification */
+/* ======================== */
+
+.header .popup {
+	position: absolute;
+	top: 100%;
+	right: 10rem;
+	z-index: 13;
+	max-width: 41rem;
+	box-shadow: 0px 2px 36px rgba(0, 0, 0, 0.1);
+	background-color: #fff;
+}
+
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0);
+	height: 100%;
+	width: 100%;
+	z-index: 12;
+	display: none;
+}
+
+.notification {
+	display: none;
+}
+
+.show-notification {
+	display: block;
+}
+
+.notification-overlay {
+	display: none;
+}
+.show-notification-overlay {
+	display: block;
+}
+
+.header .notification h5 {
+	font-size: 1.8rem;
+	font-weight: 600;
+}
+.header .notification .btn-clear {
+	color: var(--color-primary);
+	text-transform: capitalize;
+	font-size: 1.6rem;
+}
+.header .notification .text {
+	font-size: 1.6rem;
+}
+.header .notification__item:not(:last-child) {
+	/* border-bottom: 1px solid red; */
+	border-bottom: 1px solid #ecf1f6;
+	padding-bottom: 1rem;
+}
+.header .notification__img img {
+	width: 5rem;
+}
+
+/* ======================== */
+/* header wallet */
+/* ======================== */
+
+.header .wallet {
+	gap: 3rem;
+}
+
+.header .wallet {
+	display: none !important;
+}
+
+.header .show-wallet {
+	display: flex !important;
+}
+
+.header .wallet-overlay {
+	display: none;
+}
+.header .show-wallet-overlay {
+	display: block;
+}
+
+/* ======================== */
+/* header connect wallet */
+/* ======================== */
+.header .connect {
+	display: none;
+}
+
+.header .show-connect {
+	display: block;
+}
+
+.header .connect-overlay {
+	display: none;
+}
+.header .show-connect-overlay {
+	display: block;
+}
+
+.header .connect__img {
+	height: 6.4rem;
+	width: 6.4rem;
+	border-radius: 50%;
+}
+.header .connect__eth {
+	max-width: 23rem;
+	background: #f7f7f7;
+	padding: 1.2rem;
+	overflow: hidden;
+	border-radius: 1.2rem;
+}
+.header .connect .btn {
+	padding: 1.2rem;
+}
+.header .connect .btn .icon {
+	height: 2.4rem;
+	width: 2.4rem;
+}
+.header .connect .copy-btn {
+	background-color: transparent;
+	border: 1px solid var(--color-primary);
+}
+
+.header .metamask {
+	border-bottom: 2px solid #d9d9d9;
+	padding: 1.6rem 0;
+}
+.header .metamask input {
+	border: none;
+	outline: none;
+}
+.header .connect__form .btn {
+	background-color: #f15757;
+	width: 100%;
+}
+
+/* ======================== */
+/* header etherium */
+/* ======================== */
+
+.header .etherium {
+	display: none;
+}
+
+.header .show-etherium {
+	display: block;
+}
+
+.header .etherium-overlay {
+	display: none;
+}
+.header .show-etherium-overlay {
+	display: block;
+}
+
+.header .etherium {
+	right: 1rem;
+}
+.header .etherium__item {
+	padding: 1.2rem 1.6rem;
+	transition: all 0.3s;
+	border-radius: 0.8rem;
+	cursor: pointer;
+	margin-bottom: 0.4rem;
+}
+.header .etherium__item:hover {
+	background-color: var(--color-primary);
+}
+.header .etherium__img {
+	height: 3.6rem;
+	width: 3.6rem;
+	border-radius: 50%;
+}
+.header .etherium__item:hover .text {
+	color: #fff;
+}
+
+.row > * {
+	margin-top: 0;
 }

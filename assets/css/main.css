@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 body {
-	background-color: #fff;
+	background-color: #e5e5e5;
 	font-family: 'inter', sans-serif;
 	font-size: 17px;
 	line-height: 27px;
@@ -142,7 +142,7 @@ button {
 	background-color: #fff;
 }
 .bg-grey {
-	background-color: #e5e5e5;
+	background-color: #f7f7f7;
 }
 .bg-green {
 	background-color: #00c566;
@@ -342,7 +342,8 @@ button {
 	height: auto;
 	display: block;
 	padding-left: 300px;
-	z-index: 99;
+	z-index: 10;
+	position: relative;
 }
 .header-logo img {
 	max-width: 100%;
@@ -858,13 +859,26 @@ button {
     Sidebars
 ====================================================*/
 .main-sidebar {
-	padding: 25px 50px;
+	padding: 25px 35px;
 	position: fixed;
 	top: 0;
 	left: 0;
 	height: calc(100vh - 10px);
 	display: flex;
 	flex-direction: column;
+	background-color: #fff;
+	transition: all 0.5s;
+	z-index: 11;
+}
+
+.showsidebar {
+	transform: translate(0) !important;
+}
+.closeSidebar {
+	font-size: 30px;
+	position: absolute;
+	top: 1.5rem;
+	right: 2rem;
 }
 .sidebar-logo {
 	margin-bottom: 40px;

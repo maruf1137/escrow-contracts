@@ -109,3 +109,202 @@
 	outline: none;
 	border-radius: 0;
 }
+
+/* ======================= */
+/* currency popup */
+/* ======================= */
+
+.create-contract .currency {
+	flex-direction: column;
+	max-width: 51.6rem;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #fff;
+	z-index: 13;
+	display: none;
+}
+.create-contract .currency-overlay {
+	background: rgba(156, 164, 171, 0.4) !important;
+}
+
+.create-contract .show-popup .currency-overlay {
+	display: block;
+}
+.create-contract .show-popup .currency {
+	display: block;
+}
+
+.create-contract .currency__content {
+	width: 100%;
+}
+.create-contract .currency h5 {
+	font-size: 1.6rem;
+	font-weight: 600;
+	margin-bottom: 0 !important;
+}
+.create-contract .currency .close-popup {
+	height: 2rem;
+	width: 2rem;
+	border: 1.5px solid #292d32;
+	border-radius: 50%;
+}
+.create-contract .currency .close-popup i {
+	font-size: 2rem;
+}
+
+.create-contract .currency__form {
+	border: 1px solid #d1d8dd;
+	/* border: 1px solid red; */
+	border-radius: 20px;
+	padding: 1rem;
+}
+.create-contract .currency input {
+	border: none !important;
+	outline: none;
+	padding: 0.2rem !important;
+}
+.create-contract .currency__btns {
+	gap: 1.6rem 1.2rem;
+}
+.create-contract .currency__btns .btn {
+	padding: 0.8rem 1.2rem !important;
+	gap: 1rem;
+	border-radius: 4.3rem;
+	background-color: white;
+	border: 1px solid #e3e9ed;
+}
+.create-contract .currency__btns .btn.active {
+	background-color: var(--color-primary);
+}
+.create-contract .currency__btns .btn-4 .text {
+	color: #fb1891;
+}
+.create-contract .currency__btns .btn.active .text {
+	color: var(--color-white);
+}
+.create-contract .btn img {
+	height: 3.6rem;
+	width: 3.6rem;
+}
+
+.create-contract .currency__item img {
+	height: 3.6rem;
+	width: 3.6rem;
+	border-radius: 50%;
+}
+
+/* ====================== */
+/* details page */
+/* ====================== */
+.contractor .seller img {
+	height: 3.6rem;
+	width: 3.6rem;
+	border-radius: 50%;
+}
+.seller {
+	background: #f7f7f7;
+	padding: 0.8rem 1.2rem;
+	border-radius: 1.2rem;
+}
+.seller__btns {
+	gap: 1rem;
+}
+
+.seller__btns .btn-copy .icon,
+.seller__btns .btn-edit .icon {
+	height: 2.4rem;
+	width: 2.4rem;
+}
+
+.contractor__item {
+}
+.contractor__item p {
+	color: #fff;
+	font-size: 1.8rem;
+	text-transform: capitalize;
+}
+.contractor__item .count {
+	color: #fff;
+	font-weight: 600;
+	font-size: 2rem;
+}
+
+/* owner */
+
+.owner {
+	/* max-height: 50rem;
+	overflow-y: scroll; */
+	background-color: #fff;
+}
+.owner__list {
+	max-height: 30rem;
+	overflow-y: scroll;
+	padding: 2.8rem 2.4rem;
+}
+
+.owner__item {
+	position: relative;
+}
+.owner__item:not(:last-child):before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 2.5rem;
+	left: 1.4rem;
+	height: 100%;
+	width: 0.4rem;
+	background: #ecf1f6;
+	z-index: 2;
+}
+
+.owner__nav img {
+	height: 3.2rem;
+	width: 3.2rem;
+	border-radius: 50%;
+	position: relative;
+	z-index: 3;
+}
+
+.owner-btn {
+	padding: 2.8rem 0;
+	text-align: center;
+	border-top: 1px solid #e3e9ed;
+}
+
+/* message box */
+
+.message__img {
+	height: 4.8rem;
+	width: 4.8rem;
+}
+.message .name {
+	font-weight: 600;
+	font-size: 1.6rem;
+	text-transform: capitalize;
+	margin-bottom: 0.5rem;
+}
+.message .dashboard__box {
+	background: #ecf1f6;
+	border-radius: 0px 16px 16px 16px;
+}
+.message .text {
+	font-size: 1.4rem;
+	color: #66707a;
+	line-height: 2.2rem;
+}
+.message .time {
+	font-size: 1.2rem;
+	font-weight: 600;
+}
+
+.message__buyer .message__details {
+	text-align: right;
+}
+.message__buyer .dashboard__box {
+	border-radius: 16px 0px 16px 16px;
+}
+
+.message {
+}
