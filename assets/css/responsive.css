@@ -9,6 +9,9 @@
 	.main-content {
 		margin-left: 0;
 	}
+	.top-header {
+		width: 100%;
+	}
 }
 
 @media all and (max-width: 992px) {

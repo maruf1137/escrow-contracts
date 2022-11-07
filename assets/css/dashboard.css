@@ -26,8 +26,11 @@
 	overflow: hidden;
 }
 .dashboard .profile__img img {
-	height: 100%;
-	width: 100%;
+	/* height: 100%;
+	width: 100%; */
+	width: 5.6rem;
+	height: 5.6rem;
+	border-radius: 50%;
 }
 .dashboard .profile__eth {
 	background: #ecf1f6;
@@ -92,6 +95,10 @@
 	background-color: #fff;
 }
 
+.action {
+	align-items: start !important;
+}
+
 .dashboard .action__item {
 	/* padding: 1.5rem; */
 }
@@ -129,7 +136,7 @@
 	top: 100%;
 	right: 10rem;
 	z-index: 13;
-	max-width: 41rem;
+	max-width: 400px;
 	box-shadow: 0px 2px 36px rgba(0, 0, 0, 0.1);
 	background-color: #fff;
 }
@@ -177,8 +184,20 @@
 	border-bottom: 1px solid #ecf1f6;
 	padding-bottom: 1rem;
 }
-.header .notification__img img {
+.header .notification__item {
+	display: grid !important;
+	grid-template-columns: 5rem 1fr !important;
+	gap: 1.8rem;
+}
+.header .notification__img {
 	width: 5rem;
+	height: 5rem;
+}
+.header .notification__img img {
+	/* width: 100%;
+	height: 100%; */
+	width: 5rem;
+	height: 5rem;
 }
 
 /* ======================== */
@@ -188,6 +207,9 @@
 .header .wallet {
 	gap: 3rem;
 	max-width: 29rem;
+}
+.header .wallet h3 {
+	font-size: 2.4rem;
 }
 
 .header .wallet {
@@ -213,12 +235,14 @@
 }
 
 .header .show-connect {
-	display: block;
+	display: flex;
+	flex-direction: column;
 }
 
 .header .connect-overlay {
 	display: none;
 }
+
 .header .show-connect-overlay {
 	display: block;
 }
@@ -227,6 +251,7 @@
 	height: 6.4rem;
 	width: 6.4rem;
 	border-radius: 50%;
+	margin: 0 auto;
 }
 .header .connect__eth {
 	max-width: 23rem;
@@ -250,6 +275,14 @@
 .header .metamask {
 	border-bottom: 2px solid #d9d9d9;
 	padding: 1.6rem 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.header .metamask label {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
 }
 .header .metamask input {
 	border: none;
@@ -289,6 +322,9 @@
 	border-radius: 0.8rem;
 	cursor: pointer;
 	margin-bottom: 0.4rem;
+}
+.header .etherium__item .text {
+	font-size: 1.6rem;
 }
 .header .etherium__item:hover {
 	background-color: var(--color-primary);
