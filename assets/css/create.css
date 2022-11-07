@@ -61,6 +61,9 @@
 .create-contract .active .create__box {
 	display: block;
 }
+.create-contract .active .create__box .text {
+	font-weight: 600;
+}
 
 /* .create-contract .create__box  */
 .create-contract .create__box {
@@ -198,6 +201,10 @@
 /* ====================== */
 /* details page */
 /* ====================== */
+
+.details-page .main-content .row {
+	gap: 2rem 0;
+}
 .contractor .seller img {
 	height: 3.6rem;
 	width: 3.6rem;
@@ -207,6 +214,7 @@
 	background: #f7f7f7;
 	padding: 0.8rem 1.2rem;
 	border-radius: 1.2rem;
+	overflow: hidden;
 }
 .seller__btns {
 	gap: 1rem;
@@ -268,7 +276,7 @@
 }
 
 .owner-btn {
-	padding: 2.8rem 0;
+	padding: 1.4rem 0;
 	text-align: center;
 	border-top: 1px solid #e3e9ed;
 }
@@ -306,5 +314,38 @@
 	border-radius: 16px 0px 16px 16px;
 }
 
-.message {
+.message__form {
+	padding: 2.4rem;
+}
+.message__form .text__box {
+	background: #ecf1f6;
+	border-radius: 12px;
+	padding-right: 1.4rem;
+}
+.message__form .text__box input {
+	background-color: transparent;
+	border: none;
+	outline: none;
+	padding: 0.8rem 1.4rem;
+}
+.message__form .btn__form {
+}
+.message__form .btn__form img {
+}
+
+.message__form .btn-send {
+	/* height: 5.2rem;
+	width: 5.2rem; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+	padding: 0.8rem;
+}
+.message__form .btn-send .icon {
+	/* height: 2.6rem;
+	width: 2.6rem; */
+	fill: #fff;
+}
+.message__form {
 }

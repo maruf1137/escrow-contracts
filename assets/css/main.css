@@ -3,11 +3,15 @@
 ====================================================*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
+html {
+	overflow-x: hidden;
+}
+
 body {
 	background-color: #e5e5e5;
 	font-family: 'inter', sans-serif;
 	font-size: 17px;
-	line-height: 27px;
+	/* line-height: 27px; */
 	color: #555;
 	font-weight: 400;
 	letter-spacing: -0.2px;
@@ -229,6 +233,7 @@ button {
 ::-webkit-scrollbar-thumb {
 	cursor: pointer;
 	background: #008c73;
+	border-radius: 2rem;
 }
 ::selection {
 	background-color: #008c73;
@@ -363,41 +368,48 @@ button {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	height: 80px;
-	padding: 0 40px;
-	border-bottom: 1px solid #eee;
+	/* height: 80px; */
+	padding: 20px 40px;
+}
+.right-content {
+	width: 100%;
+	display: flex;
+	justify-content: end;
 }
 .right-content .header-list {
 	display: flex;
 	align-items: center;
+	/* gap: 2.4rem; */
 }
 .right-content .header-list li {
 	display: flex;
 	align-items: center;
+	padding: 0 12px;
+	cursor: pointer;
+	gap: 13px;
+}
+.right-content .header-list li .icon {
+	height: 48px;
+	width: 48px;
+	border-radius: 50%;
+}
+.right-content .header-list li .icon-chevron {
+	height: 20px;
+	width: 20px;
 }
 .right-content .header-list li:not(:last-of-type) {
-	margin-right: 60px;
-	padding-right: 60px;
-	border-right: 1px solid #b4cfbb;
+	/* margin-right: 60px;
+	padding-right: 60px; */
+	border-right: 1px solid rgba(31, 44, 55, 0.1);
 }
 .right-content .header-list li h3 {
 	font-size: 14px;
 	font-weight: 500;
-	margin-left: 10px;
+	/* margin-left: 10px; */
 	position: relative;
 	margin-bottom: 0;
 }
-.right-content .header-list li h3:before {
-	font-family: 'Font Awesome 6 Pro', sans-serif;
-	content: '\f078';
-	font-size: 15px;
-	position: absolute;
-	top: 50%;
-	right: -30px;
-	transform: translateY(-50%);
-	transition: all 0.4s ease-in-out;
-	cursor: pointer;
-}
+
 .right-content .header-list li h3 span {
 	font-size: 12px;
 	display: block;
@@ -420,7 +432,7 @@ button {
 	align-items: center;
 }
 .header-thumb {
-	height: 48px;
+	/* height: 48px; */
 }
 
 /* Menu Style */
@@ -978,7 +990,7 @@ button {
 /* Accordion */
 
 #accordian {
-	margin: 0 -26px 0;
+	/* margin: 0 -26px 0; */
 }
 #accordian h3 {
 	background-color: #008c73;
@@ -1055,7 +1067,7 @@ button {
 ====================================================*/
 .main-content {
 	margin-left: 300px;
-	padding: 40px 20px;
+	padding: 24px 20px;
 }
 
 /*===================================================
@@ -1067,6 +1079,7 @@ button {
 	align-items: center;
 	justify-content: space-between;
 	margin-bottom: 40px;
+	flex-wrap: wrap;
 }
 .contact-title h3 {
 	color: #1f2c37;
@@ -1082,6 +1095,10 @@ button {
 .contact-header-right {
 	display: flex;
 	align-items: center;
+	flex-wrap: wrap;
+}
+.contact-header-right p {
+	margin-bottom: 0;
 }
 .contact-header-right h3 {
 	color: #1f2c37;
@@ -1123,9 +1140,8 @@ button {
 .contact-wrap {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: repeat(4, 1fr);
-	grid-column-gap: 10px;
-	grid-row-gap: 10px;
+	/* grid-template-rows: repeat(4, 1fr); */
+	gap: 20px;
 }
 .contact-box {
 	background-color: #fff;
@@ -1140,9 +1156,9 @@ button {
 .box-header h3 {
 	font-size: 18px;
 	font-weight: 600;
-	line-height: 26px;
+	/* line-height: 26px; */
 	letter-spacing: 0.005em;
-	margin-bottom: 0;
+	margin-bottom: 1.4rem;
 }
 .contact-btn {
 	background-color: #00c566;
@@ -1167,6 +1183,8 @@ button {
 	align-items: center;
 	justify-content: space-between;
 	margin-bottom: 20px;
+	flex-wrap: wrap;
+	gap: 1rem;
 }
 .cr-content {
 	display: flex;
@@ -1207,6 +1225,9 @@ button {
 	padding: 8px 20px;
 	border-radius: 5px;
 	margin-bottom: 20px;
+	flex-wrap: wrap;
+	overflow: hidden;
+	gap: 1rem;
 }
 .seller-content {
 	display: flex;
@@ -1236,6 +1257,7 @@ button {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	flex-wrap: wrap;
 }
 .update-box h3 {
 	font-weight: 600;
@@ -1247,9 +1269,14 @@ button {
 /*===================================================
     NFT Section
 ====================================================*/
+
+.notification-page .contact-page {
+	overflow-x: hidden;
+}
 .nft-section {
 	padding: 20px;
 	border-radius: 8px;
+	overflow-x: scroll;
 }
 .nft-header h3 {
 	font-size: 26px !important;
@@ -1257,15 +1284,28 @@ button {
 	margin-bottom: 20px !important;
 }
 .nft-wrap {
+	gap: 1.6rem;
 	display: grid;
-	grid-template-columns: repeat(5, 1fr);
-	grid-template-rows: repeat(3, 1fr);
-	grid-column-gap: 10px;
-	grid-row-gap: 10px;
+	grid-template-columns: repeat(5, max-content);
+}
+.nft-box-1 {
+	width: 129px;
+}
+.nft-box-2 {
+	width: 169px;
+}
+.nft-box-3 {
+	width: 160px;
+}
+.nft-box-4 {
+	width: 260px;
+}
+.nft-box-5 {
+	width: 461px;
 }
 .nft-wrap.wrap-2 {
-	grid-template-columns: repeat(5, 1fr);
-	grid-template-rows: repeat(4, 1fr);
+	/* grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(4, 1fr); */
 }
 .nft-box {
 	text-align: center;
@@ -1285,6 +1325,9 @@ button {
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
+}
+.nft-box.inprogress h3 {
+	background-color: #fac800;
 }
 .nft-box.update h3 img {
 	margin-right: 10px;
@@ -1352,4 +1395,8 @@ button {
 		font-size: 24px;
 		line-height: 34px;
 	}
+}
+
+.openSidebar i {
+	font-size: 3rem;
 }

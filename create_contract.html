@@ -62,31 +62,43 @@
 					<ul class="header-list">
 						<li>
 							<button class="header-icon notification-btn">
-								<a href="#"><i class="fa-regular fa-bell"></i></a>
+								<svg class="icon">
+									<use xlink:href="assets/img/icons.svg#icon-Notification"></use>
+								</svg>
 							</button>
 						</li>
 						<li class="wallet-btn">
 							<div class="header-thumb">
-								<img src="assets/img/Connect.png" alt="connect" />
+								<svg class="icon">
+									<use xlink:href="assets/img/icons.svg#icon-Connect"></use>
+								</svg>
 							</div>
 							<div class="header-info">
 								<h3>Not Connected <span>Connect Wallet</span></h3>
 							</div>
+							<svg class="icon-chevron">
+								<use xlink:href="assets/img/icons.svg#icon-chevron-down"></use>
+							</svg>
 						</li>
 						<li class="etherium-btn">
 							<div class="header-thumb">
-								<img src="assets/img/Ethereum.png" alt="ethereum" />
+								<svg class="icon">
+									<use xlink:href="assets/img/icons.svg#icon-Ethereum"></use>
+								</svg>
 							</div>
 							<div class="header-info">
 								<h3>Ethereum</h3>
 							</div>
+							<svg class="icon-chevron">
+								<use xlink:href="assets/img/icons.svg#icon-chevron-down"></use>
+							</svg>
 						</li>
 					</ul>
 				</div>
 
 				<!-- notification box -->
-				<div class="overlay notification-overlay show-notification-overlay"></div>
-				<div class="notification dashboard__box popup show-notification">
+				<div class="overlay notification-overlay"></div>
+				<div class="notification dashboard__box popup">
 					<div class="d-flex justify-content-between align-items-center mb-2">
 						<h5 class="heading">Notification</h5>
 						<button class="btn-clear">all clear</button>
@@ -229,7 +241,8 @@
 						<button class="create__btn mb-2">Connect wallet & select network</button>
 						<div class="create__box">
 							<p class="text mb-2">
-								In order to create your contract, you need to connect a wallet
+								In order to create your contract, you need to <br />
+								connect a wallet
 							</p>
 							<button class="btn">Connect Wallet</button>
 						</div>
@@ -263,8 +276,10 @@
 		</section>
 
 		<!-- main-content -->
-
 		<div class="main-sidebar">
+			<button class="closeSidebar d-block d-xl-none">
+				<i class="bi bi-x"></i>
+			</button>
 			<div class="sidebar-logo">
 				<img src="assets/img/logo.png" alt="logo" />
 			</div>

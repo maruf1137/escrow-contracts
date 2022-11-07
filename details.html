@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!-->
 <html class="no-js" lang="en">
 	<!--<![endif]-->
 	<head>
@@ -38,7 +34,7 @@
 		<link rel="stylesheet" href="assets/css/dashboard.css" />
 	</head>
 
-	<body class="create-contract">
+	<body class="create-contract details-page">
 		<div class="site-preloader">
 			<div class="spinner"></div>
 		</div>
@@ -55,24 +51,36 @@
 					<ul class="header-list">
 						<li>
 							<button class="header-icon notification-btn">
-								<a href="#"><i class="fa-regular fa-bell"></i></a>
+								<svg class="icon">
+									<use xlink:href="assets/img/icons.svg#icon-Notification"></use>
+								</svg>
 							</button>
 						</li>
 						<li class="wallet-btn">
 							<div class="header-thumb">
-								<img src="assets/img/Connect.png" alt="connect" />
+								<svg class="icon">
+									<use xlink:href="assets/img/icons.svg#icon-Connect"></use>
+								</svg>
 							</div>
 							<div class="header-info">
 								<h3>Not Connected <span>Connect Wallet</span></h3>
 							</div>
+							<svg class="icon-chevron">
+								<use xlink:href="assets/img/icons.svg#icon-chevron-down"></use>
+							</svg>
 						</li>
 						<li class="etherium-btn">
 							<div class="header-thumb">
-								<img src="assets/img/Ethereum.png" alt="ethereum" />
+								<svg class="icon">
+									<use xlink:href="assets/img/icons.svg#icon-Ethereum"></use>
+								</svg>
 							</div>
 							<div class="header-info">
 								<h3>Ethereum</h3>
 							</div>
+							<svg class="icon-chevron">
+								<use xlink:href="assets/img/icons.svg#icon-chevron-down"></use>
+							</svg>
 						</li>
 					</ul>
 				</div>
@@ -215,7 +223,7 @@
 				<h3 class="heading">Contract Details</h3>
 			</div>
 
-			<div class="dashboard__box contractor row g-5 mb-2">
+			<div class="dashboard__box contractor row mb-2">
 				<div class="col-12 col-lg-6">
 					<div class="contractor__left">
 						<h4 class="heading mb-2">Lorem ipsum dolor sit amet. consectetur adipiscing elit</h4>
@@ -253,7 +261,7 @@
 								</button>
 							</div>
 						</div>
-						<div class="contractor__list d-flex align-items-stretch gap-4">
+						<div class="contractor__list d-flex align-items-stretch flex-wrap gap-4">
 							<div class="contractor__item btn">
 								<p class="text mb-1">amount</p>
 								<h5 class="heading count">0.32 ETH</h5>
@@ -496,14 +504,14 @@
 						>
 							<div class="text__box d-flex align-items-center justify-content-between gap-2 w-100">
 								<input type="text" placeholder="Send Mesage" class="w-100" />
-								<button class="btn__form btn-emoji">
+								<button class="btn__form btn-emoji mr-1">
 									<img src="assets/img/Smileys.svg" alt="" />
 								</button>
 								<button class="btn__form btn-document">
 									<img src="assets/img/document.icon.svg" alt="" />
 								</button>
 							</div>
-							<button class="btn">
+							<button class="btn btn-send">
 								<svg class="icon icon-send">
 									<use xlink:href="assets/img/icons.svg#icon-send"></use>
 								</svg>
@@ -517,6 +525,9 @@
 		<!-- main-content -->
 
 		<div class="main-sidebar">
+			<button class="closeSidebar d-block d-xl-none">
+				<i class="bi bi-x"></i>
+			</button>
 			<div class="sidebar-logo">
 				<img src="assets/img/logo.png" alt="logo" />
 			</div>

@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!-->
 <html class="no-js" lang="en">
 	<!--<![endif]-->
 	<head>
@@ -37,14 +33,7 @@
 		<link rel="stylesheet" href="assets/css/utilities.css" />
 	</head>
 
-	<body>
-		<!--[if lt IE 8]>
-			<p class="browserupgrade">
-				You are using an <strong>outdated</strong> browser. Please
-				<a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
-			</p>
-		<![endif]-->
-
+	<body class="notification-page">
 		<div class="site-preloader">
 			<div class="spinner"></div>
 		</div>
@@ -61,31 +50,43 @@
 					<ul class="header-list">
 						<li>
 							<button class="header-icon notification-btn">
-								<a href="#"><i class="fa-regular fa-bell"></i></a>
+								<svg class="icon">
+									<use xlink:href="assets/img/icons.svg#icon-Notification"></use>
+								</svg>
 							</button>
 						</li>
 						<li class="wallet-btn">
 							<div class="header-thumb">
-								<img src="assets/img/Connect.png" alt="connect" />
+								<svg class="icon">
+									<use xlink:href="assets/img/icons.svg#icon-Connect"></use>
+								</svg>
 							</div>
 							<div class="header-info">
 								<h3>Not Connected <span>Connect Wallet</span></h3>
 							</div>
+							<svg class="icon-chevron">
+								<use xlink:href="assets/img/icons.svg#icon-chevron-down"></use>
+							</svg>
 						</li>
 						<li class="etherium-btn">
 							<div class="header-thumb">
-								<img src="assets/img/Ethereum.png" alt="ethereum" />
+								<svg class="icon">
+									<use xlink:href="assets/img/icons.svg#icon-Ethereum"></use>
+								</svg>
 							</div>
 							<div class="header-info">
 								<h3>Ethereum</h3>
 							</div>
+							<svg class="icon-chevron">
+								<use xlink:href="assets/img/icons.svg#icon-chevron-down"></use>
+							</svg>
 						</li>
 					</ul>
 				</div>
 
 				<!-- notification box -->
-				<div class="overlay notification-overlay show-notification-overlay"></div>
-				<div class="notification dashboard__box popup show-notification">
+				<div class="overlay notification-overlay"></div>
+				<div class="notification dashboard__box popup">
 					<div class="d-flex justify-content-between align-items-center mb-2">
 						<h5 class="heading">Notification</h5>
 						<button class="btn-clear">all clear</button>
@@ -225,129 +226,141 @@
 						<div class="nft-header">
 							<h3>Today</h3>
 						</div>
-						<div class="nft-wrap">
-							<div class="nft-box">
+
+						<div class="nft-wrap mb-2">
+							<div class="nft-box nft-box-1">
 								<h3>5:52 PM</h3>
 							</div>
-							<div class="nft-box">
+							<div class="nft-box nft-box-2">
 								<h3>Betting Proj...</h3>
 							</div>
-							<div class="nft-box update">
+							<div class="nft-box nft-box-3 update">
 								<h3><img src="assets/img/update.png" alt="" />Updated</h3>
 							</div>
-							<div class="nft-box">
+							<div class="nft-box nft-box-4">
 								<h3>Contract is created ...</h3>
 							</div>
-							<div class="nft-box profile">
+							<div class="nft-box nft-box-5 profile">
 								<h3>
 									<img src="assets/img/Profile.png" alt="profile" />Buyer: <span>0x74c19...</span>
 								</h3>
 							</div>
-							<div class="nft-box">
+						</div>
+						<div class="nft-wrap mb-2">
+							<div class="nft-box nft-box-1">
 								<h3>5:52 PM</h3>
 							</div>
-							<div class="nft-box">
+							<div class="nft-box nft-box-2">
 								<h3>Website Bui...</h3>
 							</div>
-							<div class="nft-box update">
+							<div class="nft-box nft-box-3 update">
 								<h3><img src="assets/img/update.png" alt="" />Updated</h3>
 							</div>
-							<div class="nft-box">
+							<div class="nft-box nft-box-4">
 								<h3>Contract is created ...</h3>
 							</div>
-							<div class="nft-box profile">
+							<div class="nft-box nft-box-5 profile">
 								<h3>
 									<img src="assets/img/Profile.png" alt="profile" />Buyer: <span>0x74c19...</span>
 								</h3>
 							</div>
-							<div class="nft-box">
+						</div>
+						<div class="nft-wrap mb-2">
+							<div class="nft-box nft-box-1">
 								<h3>5:52 PM</h3>
 							</div>
-							<div class="nft-box">
+							<div class="nft-box nft-box-2">
 								<h3>Creating NF...</h3>
 							</div>
-							<div class="nft-box update">
-								<h3><img src="assets/img/update.png" alt="" />Updated</h3>
+							<div class="nft-box nft-box-3 update inprogress">
+								<h3><img src="assets/img/update.png" alt="" />In Progress</h3>
 							</div>
-							<div class="nft-box">
+							<div class="nft-box nft-box-4">
 								<h3>Contract is created ...</h3>
 							</div>
-							<div class="nft-box profile">
+							<div class="nft-box nft-box-5 profile">
 								<h3>
 									<img src="assets/img/Profile.png" alt="profile" />Buyer: <span>0x74c19...</span>
 								</h3>
 							</div>
 						</div>
 					</div>
+
 					<div class="nft-contain mb-40">
 						<div class="nft-header">
 							<h3>Yesterday</h3>
 						</div>
-						<div class="nft-wrap wrap-2">
-							<div class="nft-box">
+						<div class="nft-wrap mb-2">
+							<div class="nft-box nft-box-1">
 								<h3>5:52 PM</h3>
 							</div>
-							<div class="nft-box">
-								<h3>Betting Proj...</h3>
+							<div class="nft-box nft-box-2">
+								<h3>Creating NF...</h3>
 							</div>
-							<div class="nft-box update">
-								<h3><img src="assets/img/update.png" alt="" />Updated</h3>
+							<div class="nft-box nft-box-3 update inprogress">
+								<h3><img src="assets/img/update.png" alt="" />In Progress</h3>
 							</div>
-							<div class="nft-box">
+							<div class="nft-box nft-box-4">
 								<h3>Contract is created ...</h3>
 							</div>
-							<div class="nft-box profile">
+							<div class="nft-box nft-box-5 profile">
 								<h3>
 									<img src="assets/img/Profile.png" alt="profile" />Buyer: <span>0x74c19...</span>
 								</h3>
 							</div>
-							<div class="nft-box">
+						</div>
+						<div class="nft-wrap mb-2">
+							<div class="nft-box nft-box-1">
 								<h3>5:52 PM</h3>
 							</div>
-							<div class="nft-box">
-								<h3>Betting Proj...</h3>
+							<div class="nft-box nft-box-2">
+								<h3>Creating NF...</h3>
 							</div>
-							<div class="nft-box update">
-								<h3><img src="assets/img/update.png" alt="" />Updated</h3>
+							<div class="nft-box nft-box-3 update">
+								<h3><img src="assets/img/update.png" alt="" />Update</h3>
 							</div>
-							<div class="nft-box">
+							<div class="nft-box nft-box-4">
 								<h3>Contract is created ...</h3>
 							</div>
-							<div class="nft-box profile">
+							<div class="nft-box nft-box-5 profile">
 								<h3>
 									<img src="assets/img/Profile.png" alt="profile" />Buyer: <span>0x74c19...</span>
 								</h3>
 							</div>
-							<div class="nft-box">
+						</div>
+						<div class="nft-wrap mb-2">
+							<div class="nft-box nft-box-1">
 								<h3>5:52 PM</h3>
 							</div>
-							<div class="nft-box">
-								<h3>Betting Proj...</h3>
+							<div class="nft-box nft-box-2">
+								<h3>Creating NF...</h3>
 							</div>
-							<div class="nft-box update">
-								<h3><img src="assets/img/update.png" alt="" />Updated</h3>
+							<div class="nft-box nft-box-3 update">
+								<h3><img src="assets/img/update.png" alt="" />Update</h3>
 							</div>
-							<div class="nft-box">
+							<div class="nft-box nft-box-4">
 								<h3>Contract is created ...</h3>
 							</div>
-							<div class="nft-box profile">
+							<div class="nft-box nft-box-5 profile">
 								<h3>
 									<img src="assets/img/Profile.png" alt="profile" />Buyer: <span>0x74c19...</span>
 								</h3>
 							</div>
-							<div class="nft-box">
+						</div>
+						<div class="nft-wrap mb-2">
+							<div class="nft-box nft-box-1">
 								<h3>5:52 PM</h3>
 							</div>
-							<div class="nft-box">
-								<h3>Betting Proj...</h3>
+							<div class="nft-box nft-box-2">
+								<h3>Creating NF...</h3>
 							</div>
-							<div class="nft-box update">
-								<h3><img src="assets/img/update.png" alt="" />Updated</h3>
+							<div class="nft-box nft-box-3 update inprogress">
+								<h3><img src="assets/img/update.png" alt="" />In Progress</h3>
 							</div>
-							<div class="nft-box">
+							<div class="nft-box nft-box-4">
 								<h3>Contract is created ...</h3>
 							</div>
-							<div class="nft-box profile">
+							<div class="nft-box nft-box-5 profile">
 								<h3>
 									<img src="assets/img/Profile.png" alt="profile" />Buyer: <span>0x74c19...</span>
 								</h3>
@@ -358,71 +371,78 @@
 						<div class="nft-header">
 							<h3>Yesterday</h3>
 						</div>
-						<div class="nft-wrap wrap-2">
-							<div class="nft-box">
+
+						<div class="nft-wrap mb-2">
+							<div class="nft-box nft-box-1">
 								<h3>5:52 PM</h3>
 							</div>
-							<div class="nft-box">
-								<h3>Betting Proj...</h3>
+							<div class="nft-box nft-box-2">
+								<h3>Creating NF...</h3>
 							</div>
-							<div class="nft-box update">
-								<h3><img src="assets/img/update.png" alt="" />Updated</h3>
+							<div class="nft-box nft-box-3 update">
+								<h3><img src="assets/img/update.png" alt="" />Update</h3>
 							</div>
-							<div class="nft-box">
+							<div class="nft-box nft-box-4">
 								<h3>Contract is created ...</h3>
 							</div>
-							<div class="nft-box profile">
+							<div class="nft-box nft-box-5 profile">
 								<h3>
 									<img src="assets/img/Profile.png" alt="profile" />Buyer: <span>0x74c19...</span>
 								</h3>
 							</div>
-							<div class="nft-box">
+						</div>
+						<div class="nft-wrap mb-2">
+							<div class="nft-box nft-box-1">
 								<h3>5:52 PM</h3>
 							</div>
-							<div class="nft-box">
-								<h3>Betting Proj...</h3>
+							<div class="nft-box nft-box-2">
+								<h3>Creating NF...</h3>
 							</div>
-							<div class="nft-box update">
-								<h3><img src="assets/img/update.png" alt="" />Updated</h3>
+							<div class="nft-box nft-box-3 update inprogress">
+								<h3><img src="assets/img/update.png" alt="" />In Progress</h3>
 							</div>
-							<div class="nft-box">
+							<div class="nft-box nft-box-4">
 								<h3>Contract is created ...</h3>
 							</div>
-							<div class="nft-box profile">
+							<div class="nft-box nft-box-5 profile">
 								<h3>
 									<img src="assets/img/Profile.png" alt="profile" />Buyer: <span>0x74c19...</span>
 								</h3>
 							</div>
-							<div class="nft-box">
+						</div>
+						<div class="nft-wrap mb-2">
+							<div class="nft-box nft-box-1">
 								<h3>5:52 PM</h3>
 							</div>
-							<div class="nft-box">
-								<h3>Betting Proj...</h3>
+							<div class="nft-box nft-box-2">
+								<h3>Creating NF...</h3>
 							</div>
-							<div class="nft-box update">
-								<h3><img src="assets/img/update.png" alt="" />Updated</h3>
+							<div class="nft-box nft-box-3 update">
+								<h3><img src="assets/img/update.png" alt="" />Update</h3>
 							</div>
-							<div class="nft-box">
+							<div class="nft-box nft-box-4">
 								<h3>Contract is created ...</h3>
 							</div>
-							<div class="nft-box profile">
+							<div class="nft-box nft-box-5 profile">
 								<h3>
 									<img src="assets/img/Profile.png" alt="profile" />Buyer: <span>0x74c19...</span>
 								</h3>
 							</div>
-							<div class="nft-box">
+						</div>
+						<div class="nft-wrap mb-2">
+							<div class="nft-box nft-box-1">
 								<h3>5:52 PM</h3>
 							</div>
-							<div class="nft-box">
-								<h3>Betting Proj...</h3>
+							<div class="nft-box nft-box-2">
+								<h3>Creating NF...</h3>
 							</div>
-							<div class="nft-box update">
-								<h3><img src="assets/img/update.png" alt="" />Updated</h3>
+							<div class="nft-box nft-box-3 update inprogress">
+								<h3><img src="assets/img/update.png" alt="" />In Progress</h3>
 							</div>
-							<div class="nft-box">
+							<div class="nft-box nft-box-4">
 								<h3>Contract is created ...</h3>
 							</div>
-							<div class="nft-box profile">
+							<div class="nft-box nft-box-5 profile">
 								<h3>
 									<img src="assets/img/Profile.png" alt="profile" />Buyer: <span>0x74c19...</span>
 								</h3>
@@ -435,6 +455,9 @@
 		<!-- ./ main-content -->
 
 		<div class="main-sidebar">
+			<button class="closeSidebar d-block d-xl-none">
+				<i class="bi bi-x"></i>
+			</button>
 			<div class="sidebar-logo">
 				<img src="assets/img/logo.png" alt="logo" />
 			</div>

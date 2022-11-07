@@ -1,10 +1,5 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!-->
 <html class="no-js" lang="en">
-	<!--<![endif]-->
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -56,24 +51,36 @@
 							<ul class="header-list">
 								<li>
 									<button class="header-icon notification-btn">
-										<a href="#"><i class="fa-regular fa-bell"></i></a>
+										<svg class="icon">
+											<use xlink:href="assets/img/icons.svg#icon-Notification"></use>
+										</svg>
 									</button>
 								</li>
 								<li class="wallet-btn">
 									<div class="header-thumb">
-										<img src="assets/img/Connect.png" alt="connect" />
+										<svg class="icon">
+											<use xlink:href="assets/img/icons.svg#icon-Connect"></use>
+										</svg>
 									</div>
 									<div class="header-info">
 										<h3>Not Connected <span>Connect Wallet</span></h3>
 									</div>
+									<svg class="icon-chevron">
+										<use xlink:href="assets/img/icons.svg#icon-chevron-down"></use>
+									</svg>
 								</li>
 								<li class="etherium-btn">
 									<div class="header-thumb">
-										<img src="assets/img/Ethereum.png" alt="ethereum" />
+										<svg class="icon">
+											<use xlink:href="assets/img/icons.svg#icon-Ethereum"></use>
+										</svg>
 									</div>
 									<div class="header-info">
 										<h3>Ethereum</h3>
 									</div>
+									<svg class="icon-chevron">
+										<use xlink:href="assets/img/icons.svg#icon-chevron-down"></use>
+									</svg>
 								</li>
 							</ul>
 						</div>
@@ -216,9 +223,11 @@
 					</div>
 
 					<div class="dashboard">
-						<div class="row g-5 align-items-lg-stretch mb-4">
+						<div class="row align-items-lg-stretch mb-4">
 							<div class="col-12 col-lg-7">
-								<div class="dashboard__box profile">
+								<div
+									class="dashboard__box profile h-100 d-flex flex-column justify-content-between"
+								>
 									<div class="nav d-flex align-items-center mb-3">
 										<button class="profile__img mr-2">
 											<img src="assets/img/Profile.png" alt="" />
@@ -254,24 +263,20 @@
 							</div>
 
 							<div class="col-12 col-lg-5">
-								<div class="dashboard__box meet row gx-5">
-									<div class="col-5">
-										<div class="meet__card"></div>
-									</div>
-									<div class="col">
-										<div class="meet__content">
-											<h4 class="heading mb-1">Meet the new Escrow!</h4>
-											<p class="text mb-1">
-												The most trusted onchain escrow platform judged by decentralized community.
-											</p>
-											<button class="btn">read more</button>
-										</div>
+								<div class="dashboard__box meet d-flex align-items-start gap-4">
+									<div class="meet__card d-none d-sm-block"></div>
+									<div class="meet__content">
+										<h4 class="heading mb-1">Meet the new Escrow!</h4>
+										<p class="text mb-1">
+											The most trusted onchain escrow platform judged by decentralized community.
+										</p>
+										<button class="btn">read more</button>
 									</div>
 								</div>
 							</div>
 						</div>
 
-						<div class="row g-5">
+						<div class="row">
 							<div class="col-12 col-lg-7">
 								<div class="action d-flex justify-content-between align-items-center mb-2">
 									<h5 class="heading">Recent Actions</h5>
@@ -282,13 +287,13 @@
 										<ul class="item d-flex align-items-center justify-content-between">
 											<li class="text">Website Bui...</li>
 											<li class="text">
-												<img src="assets/img/icon-1.png" alt="" />
+												<img src="assets/img/icon-1.png" alt="" class="mr-1" />
+												<span class="text">Update Requested</span>
 											</li>
-											<li class="text">Update Requested</li>
 											<li class="text">
-												<img src="assets/img/Profile.png" alt="" />
+												<img src="assets/img/Profile.png" alt="" class="mr-1" />
+												<span class="text">0xaA...Ba</span>
 											</li>
-											<li class="text">0xaA...Ba</li>
 											<li class="text date"><strong>10/28/2022 2:32PM</strong></li>
 										</ul>
 									</div>
@@ -296,13 +301,13 @@
 										<ul class="item d-flex align-items-center justify-content-between">
 											<li class="text">Virtual Assi ...</li>
 											<li class="text">
-												<img src="assets/img/icon-2.png" alt="" />
+												<img src="assets/img/icon-2.png" alt="" class="mr-1" />
+												<span class="text">Contrac Deployed</span>
 											</li>
-											<li class="text">Contrac Deployed</li>
 											<li class="text">
-												<img src="assets/img/Profile.png" alt="" />
+												<img src="assets/img/Profile.png" alt="" class="mr-1" />
+												<span class="text">0xaA...Ba</span>
 											</li>
-											<li class="text">0xaA...Ba</li>
 											<li class="text date"><strong>10/28/2022 2:32PM</strong></li>
 										</ul>
 									</div>
@@ -310,13 +315,13 @@
 										<ul class="item d-flex align-items-center justify-content-between">
 											<li class="text">Web Design...</li>
 											<li class="text">
-												<img src="assets/img/icon-3.png" alt="" />
+												<img src="assets/img/icon-3.png" alt="" class="mr-1" />
+												<span class="text">Contrac Deployed</span>
 											</li>
-											<li class="text">Contract Created</li>
 											<li class="text">
-												<img src="assets/img/Profile.png" alt="" />
+												<img src="assets/img/Profile.png" alt="" class="mr-1" />
+												<span class="text">0xaA...Ba</span>
 											</li>
-											<li class="text">0xaA...Ba</li>
 											<li class="text date"><strong>10/28/2022 2:32PM</strong></li>
 										</ul>
 									</div>
@@ -324,13 +329,13 @@
 										<ul class="item d-flex align-items-center justify-content-between">
 											<li class="text">Sports Betti...</li>
 											<li class="text">
-												<img src="assets/img/icon-4.png" alt="" />
+												<img src="assets/img/icon-4.png" alt="" class="mr-1" />
+												<span class="text">Update Approved</span>
 											</li>
-											<li class="text">Update Approved</li>
 											<li class="text">
-												<img src="assets/img/Profile.png" alt="" />
+												<img src="assets/img/Profile.png" alt="" class="mr-1" />
+												<span class="text">0xaA...Ba</span>
 											</li>
-											<li class="text">0xaA...Ba</li>
 											<li class="text date"><strong>10/28/2022 2:32PM</strong></li>
 										</ul>
 									</div>
@@ -338,13 +343,13 @@
 										<ul class="item d-flex align-items-center justify-content-between">
 											<li class="text">Project Man...</li>
 											<li class="text">
-												<img src="assets/img/icon-5.png" alt="" />
+												<img src="assets/img/icon-5.png" alt="" class="mr-1" />
+												<span class="text">Contract Disputed</span>
 											</li>
-											<li class="text">Contract Disputed</li>
 											<li class="text">
-												<img src="assets/img/Profile.png" alt="" />
+												<img src="assets/img/Profile.png" alt="" class="mr-1" />
+												<span class="text">0xaA...Ba</span>
 											</li>
-											<li class="text">0xaA...Ba</li>
 											<li class="text date"><strong>10/28/2022 2:32PM</strong></li>
 										</ul>
 									</div>
@@ -355,7 +360,7 @@
 								<div class="action">
 									<h5 class="heading mb-3">Connect & Transact</h5>
 
-									<div class="row g-5">
+									<div class="row">
 										<div class="col-12 col-sm-6">
 											<div class="dashboard__box card">
 												<img src="assets/img/card-img-1.png" alt="" class="card__img mb-2" />
@@ -363,7 +368,7 @@
 												<p class="text mb-2">
 													Contract interaction and batch them into a single transaction
 												</p>
-												<a href="#" class="btn">Use Transaction Builder</a>
+												<a href="#" class="btn">Use</a>
 											</div>
 										</div>
 										<div class="col-12 col-sm-6">
@@ -373,7 +378,7 @@
 												<p class="text mb-2">
 													Connect your safe to any dApp that support WalletConnect
 												</p>
-												<a href="#" class="btn">Use WalletConnect</a>
+												<a href="#" class="btn">Use</a>
 											</div>
 										</div>
 									</div>
