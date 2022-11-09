@@ -136,7 +136,7 @@
 	top: 100%;
 	right: 10rem;
 	z-index: 13;
-	max-width: 400px;
+	max-width: 40rem;
 	box-shadow: 0px 2px 36px rgba(0, 0, 0, 0.1);
 	background-color: #fff;
 }
@@ -275,9 +275,11 @@
 .header .metamask {
 	border-bottom: 2px solid #d9d9d9;
 	padding: 1.6rem 0;
-	display: flex;
+	/* display: flex;
 	justify-content: space-between;
-	align-items: center;
+	align-items: center; */
+	display: grid;
+	grid-template-columns: 1fr max-content;
 }
 .header .metamask label {
 	display: flex;
@@ -287,6 +289,7 @@
 .header .metamask input {
 	border: none;
 	outline: none;
+	width: 100%;
 }
 .header .connect__form .btn {
 	background-color: #f15757;
