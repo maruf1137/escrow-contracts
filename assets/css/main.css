@@ -1314,10 +1314,10 @@ button {
 	width: 160px;
 }
 .nft-box-4 {
-	min-width: 260px;
+	min-width: 500px;
 }
 .nft-box-5 {
-	min-width: 461px;
+	min-width: 200px;
 }
 .nft-wrap.wrap-2 {
 	/* grid-template-columns: repeat(5, 1fr);
