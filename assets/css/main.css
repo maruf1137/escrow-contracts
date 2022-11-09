@@ -1302,8 +1302,9 @@ button {
 .nft-wrap {
 	gap: 1.6rem;
 	display: grid;
-	grid-template-columns: repeat(5, max-content);
+	grid-template-columns: 130px max-content 160px 1fr 200px;
 }
+/* 
 .nft-box-1 {
 	width: 129px;
 }
@@ -1318,7 +1319,7 @@ button {
 }
 .nft-box-5 {
 	min-width: 200px;
-}
+} */
 .nft-wrap.wrap-2 {
 	/* grid-template-columns: repeat(5, 1fr);
 	grid-template-rows: repeat(4, 1fr); */
