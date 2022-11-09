@@ -1302,7 +1302,7 @@ button {
 .nft-wrap {
 	gap: 1.6rem;
 	display: grid;
-	grid-template-columns: 130px max-content 160px 1fr 200px;
+	grid-template-columns: 130px max-content 160px 1fr min-content;
 }
 /* 
 .nft-box-1 {
