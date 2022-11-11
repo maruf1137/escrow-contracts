@@ -377,7 +377,7 @@ button {
 .right-content {
 	width: 100%;
 	display: flex;
-	justify-content: end;
+	justify-content: flex-end;
 }
 .right-content .header-list {
 	display: flex;
